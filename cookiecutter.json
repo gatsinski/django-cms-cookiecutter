@@ -1,0 +1,6 @@
+{
+  "project_name": "django_cokiecutter",
+  "project_name_verbose": "Django Cookiecutter",
+  "project_description": "Simple Django Cookiecutter Project",
+  "_copy_without_render": ["*.html"]
+}
