@@ -24,6 +24,7 @@ include(
     "components/middlewares.py",
     "components/password_validation.py",
     "components/templates.py",
+    "components/filer.py",
     "environments/{0}.py".format(ENV),
     optional("environments/local.py"),
 )
