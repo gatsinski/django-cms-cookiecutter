@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     # Third party apps
     "django_extensions",
     "debug_toolbar",
+    "treebeard",
+    "sekizai",
     # Django Apps
     "django.contrib.admin",
     "django.contrib.auth",
@@ -31,19 +33,34 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Project apps
-    "{{ cookiecutter.project_name }}",
-    "{{ cookiecutter.project_name }}.contrib.users.apps.UsersConfig",
+    "{{ django_cookiecutter.project_name }}",
+    "{{ django_cookiecutter.project_name }}.contrib.users.apps.UsersConfig",
+    # Django CMS Apps
+    "cms",
+    "menus",
+    "djangocms_admin_style",
 ]
 
-ROOT_URLCONF = "{{ cookiecutter.project_name }}.urls"
+SITE_ID = 1
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-WSGI_APPLICATION = "{{ cookiecutter.project_name }}.wsgi.application"
+ROOT_URLCONF = "{{ django_cookiecutter.project_name }}.urls"
+
+WSGI_APPLICATION = "{{ django_cookiecutter.project_name }}.wsgi.application"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = Path(BASE_DIR, "static")
+
+# Media files
+# https://docs.djangoproject.com/en/3.2/topics/files/
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = Path(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
