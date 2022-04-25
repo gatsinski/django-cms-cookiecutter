@@ -44,6 +44,15 @@ INSTALLED_APPS = [
     "menus",
     "djangocms_admin_style",
     "filer",
+    "djangocms_text_ckeditor",
+    "djangocms_link",
+    "djangocms_file",
+    "djangocms_picture",
+    "djangocms_video",
+    "djangocms_googlemap",
+    "djangocms_snippet",
+    "djangocms_style",
+    "djangocms_icon",
 ]
 
 SITE_ID = 1
